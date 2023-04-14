@@ -1,8 +1,9 @@
 <!-- SIDEBAR -->
 <section id="sidebar">
 		<a href="" class="brand">
-			<i class='bx bxs-data' style="font-size: 35px;"></i>
-			<span class="text">STUD-INFO</span>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="./images/logo.png" style="width: 60px; height: 50px; padding: 10px; margin-top: 10px;"></li>
+			<span class="text">&nbsp; STUD-INFO</span>
 		</a>
 		<ul class="side-menu top">
 			
