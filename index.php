@@ -63,7 +63,7 @@ include ("./include/sidebar.php");
         <h3><span><b><?=$_SESSION['fname']?> <?=$_SESSION['lname']?></b></span></h3>
         <ul>
           <li>
-            <a href="#">My profile</a>
+            <a href="profile.php">My profile</a>
           </li>
           <li>
             <a href="#">Setting</a>
