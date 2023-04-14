@@ -89,50 +89,54 @@ $row = $result->fetch_assoc();
   </div>
 </div>
                                 
-                                <div class="card-body">
+<div class="card-body">
        
-                                <table id="example" class="table table-hover" style="width:100%">
-                                    <thead>
-                                    <tr> 
-                                        <th>ID</th>
-                                        <th>Full Name</th>
-                                        <th>Gender</th>
-                                        <th>Age</th>
-                                        <th>Address</th>
-                                        <th>Contact</th>
-										<th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    
-                                    <tbody>
-                                    <?php do{ 
-                                        if (!empty($row)){?>
-                                        <tr>
-                                        <td><?php echo $row['id'];?></td>
-                                        <td><?php echo $row['fname'];?>&nbsp;<?php echo $row['lname'];?></td>
-                                        <td><?php echo $row['sex'];?></td>
-                                        <td><?php echo $row['age'];?></td> 
-                                        <td><?php echo $row['address'];?></td>
-                                        <td><?php echo $row['contact'];?></td> 
-										<td>
+<h2>Student Information</h2>
 
+  <link href="css/stylesheet.css" rel="stylesheet">
 
+   <input type="search" class="lighter-table-filter" data-table="table-info" placeholder="Search...">
+<table class="table-info table" style="width: 100%;">
+<thead>
+            <tr> 
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Contact</th>
+			<th>Action</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        <?php do{ 
+            if (!empty($row)){?>
+            <tr>
+            <td><?php echo $row['id'];?></td>
+            <td><?php echo $row['fname'];?>&nbsp;<?php echo $row['lname'];?></td>
+            <td><?php echo $row['sex'];?></td>
+            <td><?php echo $row['age'];?></td> 
+            <td><?php echo $row['address'];?></td>
+            <td><?php echo $row['contact'];?></td> 
+			<td>
 
-									</td> 
-                                    
-                                       </tr>
-                                    <?php }}while($row = $result->fetch_assoc()); ?>
-                                    </tbody>
-                                    </table>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
+			</td> 
+           </tr>
+        <?php }}while($row = $result->fetch_assoc()); ?>
+        </tbody>
+        </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+ <script  src="JS/function.js"></script>
 
 </div>
 

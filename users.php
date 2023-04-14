@@ -88,10 +88,14 @@ $row = $result->fetch_assoc();
 	</h5>
   </div>
 </div>
-                                
-                                <div class="card-body">
+<div class="card-body">
        
-                                <table id="example" class="table table-hover" style="width:100%">
+<h2>Users</h2>
+
+  <link href="css/stylesheet.css" rel="stylesheet">
+
+   <input type="search" class="lighter-table-filter" data-table="table-info" placeholder="Search...">
+<table class="table-info table" style="width: 100%;">
                                     <thead>
                                     <tr> 
                                         <th>ID</th>
@@ -148,8 +152,9 @@ $row = $result->fetch_assoc();
 
 <?php
 include ("script/script.php");
-
 ?>
+
+<script  src="JS/function.js"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

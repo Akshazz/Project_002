@@ -1,0 +1,30 @@
+
+input {
+    width: 250px;
+    height: 40px;
+    float: right;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #b8b8b8;
+    border-radius: 20px;
+}
+input:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 20px;
+}
+table {
+    margin-top: 75px;
+    width: 100%;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+tr:nth-of-type(even) {
+    background: #ececec;
+}
+thead {
+    background: #dbdbdb;
+}
