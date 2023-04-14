@@ -30,9 +30,16 @@
 				</a>
 			</li>
 			<li>
-				<a href="logout.php">
-					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Sign out</span>
+				<a href="">
+					<i class='bx bxs-shield' ></i>
+					<span class="text">Privacy & Policy</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="">
+					<i class='bx bx-info-circle' ></i>
+					<span class="text">About</span>
 				</a>
 			</li>
 		</ul>

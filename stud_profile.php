@@ -52,8 +52,34 @@ include ("./include/stud_sidebar.php");
 				<span class="num">0</span>
 			</a>
 
-			<b><?=$_SESSION['role']?></b><a href="profile.php" class="profile"><img src="images/user.png">
-			</a>
+			<b><?=$_SESSION['role']?></b><p class="profile"><img src="images/user.png">
+</p>
+
+<div class="action">
+      <div class="profile" onclick="menuToggle();">
+      </div>
+      <div class="menu">
+        <h3><span><b><?=$_SESSION['fname']?> <?=$_SESSION['lname']?></b></span></h3>
+        <ul>
+          <li>
+            <a href="stud_profile.php">My profile</a>
+          </li>
+          <li>
+            <a href="#">Setting</a>
+          </li>
+          <li>
+            <a href="logout.php">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      function menuToggle() {
+        const toggleMenu = document.querySelector(".menu");
+        toggleMenu.classList.toggle("active");
+      }
+    </script>
+
 		</nav>
 		<!-- NAVBAR -->
 
@@ -110,3 +136,77 @@ include ("script/script.php");
 
 ?>
 
+
+<style>
+
+/* Dropdown Profile */
+.action {
+	position: fixed;
+	top: 20px;
+	right: 30px;
+  }
+  
+  .action .profile {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+  }
+  
+  .action .profile img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	object-fit: cover;
+  }
+  
+  .action .menu {
+	position: absolute;
+	right: -10px;
+	padding: 5px 20px;
+	background: #fff;
+	width: 200px;
+	box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
+	visibility: hidden;
+	opacity: 0;
+  }
+  
+  .action .menu.active {
+	top: 80px;
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  .action .menu::before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	right: 28px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	transform: rotate(45deg);
+  }
+  
+  .action .menu h3 {
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	padding: 10px 0;
+	font-weight: 500;
+	color: #555;
+	line-height: 1.5em;
+  }
+  
+  .action .menu ul li {
+	list-style: none;
+	padding: 16px 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.05);
+	display: flex;
+	align-items: center;
+  }
+	</style>
