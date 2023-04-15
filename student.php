@@ -85,7 +85,7 @@ include ("./include/stud_sidebar.php");
 
 		<!-- MAIN -->
 		<main>
-			<div class="head-title">
+		<div class="head-title">
 				<div class="left">
 					<h1>Dashboard</h1>
 					<ul class="breadcrumb">
@@ -105,10 +105,8 @@ include ("./include/stud_sidebar.php");
 				<li>
 
   <!-- users -->
-  <div class="card">
-  <div class="card-body text-center">
-	<h5 class="card-title">
-<p> WELCOME User's</p>
+
+<p> WELCOME User's </p>
 
 
 	</h5>

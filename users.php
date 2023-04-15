@@ -38,7 +38,7 @@ $row = $result->fetch_assoc();
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu' ></i>
-			<a href="" class="nav-link">HOME</a>
+			<a href="index.php" class="nav-link">HOME</a>
 
 			<form action="">
 				<div class="form-input">

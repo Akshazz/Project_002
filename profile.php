@@ -52,10 +52,10 @@ include ("./include/sidebar.php");
 				<span class="num">0</span>
 			</a>
 
-			<b><?=$_SESSION['role']?></b><p href="profile.php" class="profile"><img src="images/user.png">
+			<b><?=$_SESSION['role']?></b><p class="profile"><img src="images/user.png">
 </p>
 
-			<div class="action">
+<div class="action">
       <div class="profile" onclick="menuToggle();">
       </div>
       <div class="menu">
@@ -85,7 +85,7 @@ include ("./include/sidebar.php");
 
 		<!-- MAIN -->
 		<main>
-			<div class="head-title">
+		<div class="head-title">
 				<div class="left">
 					<h1>Dashboard</h1>
 					<ul class="breadcrumb">
@@ -104,15 +104,77 @@ include ("./include/sidebar.php");
 			<ul class="box-info">
 				<li>
 
+<?php
+
+$con = connection();
+
+  $id=$_SESSION['id'];
+  $sql = "SELECT * FROM my_profile WHERE id=$id";
+  $result = $con->query($sql) or die($con->error);
+  $row = $result->fetch_assoc();    
+
+?>
+
 
 <!-- admin -->
-  <div class="card">
-  <div class="card-body text-center">
-	<h5 class="card-title">
-	</h5>
+				  <div class="col-md-12">
+                <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12" >
+                    </div>
+                    </div>
+                    <fieldset><legend>Profile Information</legend></fieldset>
+<hr>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="email"><b>Email</b></label>
+      <input type="email" class="form-control" value="<?php echo $row["email"];?>" disabled>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="password"><b>Password</b></label>
+      <input type="password" class="form-control" value="<?php echo $row["password"];?>" disabled>
+    </div>
   </div>
-</div>
-<b>Name:</b><?=$_SESSION['fname']?> <?=$_SESSION['lname']?>
+
+  <div class="form-row">
+    <div class="form-group col-md-3">
+    <label for="fname"><b>First Name</b></label>
+    <input type="text" class="form-control" value="<?php echo $row["fname"];?>" readonly>
+  </div>
+
+    <div class="form-group col-md-3">
+    <label for="lname"><b>Last Name</b></label>
+    <input type="text" class="form-control" value="<?php echo $row["lname"];?>" readonly>
+  </div>
+
+  <div class="form-group col-md-3">
+    <label for="mname"><b>Middle Name</b></label>
+    <input type="text" class="form-control" value="<?php echo $row["mname"];?>" readonly>
+  </div>
+
+  <div class="form-group col-md-3">
+    <label for="suffix"><b>Suffix*</b></label>
+    <input type="text" class="form-control" value="<?php echo $row["suffix"];?>" readonly>
+  </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" value="<?php echo $row["address"];?>" readonly>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="city">City</label>
+      <input type="text" class="form-control" value="<?php echo $row["city"];?>" readonly>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="zip">Zip</label>
+      <input type="text" class="form-control" value="<?php echo $row["zip"];?>" readonly>
+    </div>
+
+
+  </div>
 </div>
 
 </div>
@@ -135,6 +197,7 @@ include ("./include/sidebar.php");
 include ("script/script.php");
 
 ?>
+
 
 <style>
 
@@ -209,3 +272,4 @@ include ("script/script.php");
 	align-items: center;
   }
 	</style>
+
