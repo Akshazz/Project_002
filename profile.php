@@ -123,7 +123,7 @@ $con = connection();
                     <div class="col-sm-12" >
                     </div>
                     </div>
-                    <fieldset><legend>Profile Information</legend></fieldset>
+                    <fieldset><legend><b style="font-size: 30px;">Profile Information</b></legend></fieldset>
 <hr>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -159,17 +159,17 @@ $con = connection();
 
 
     <div class="form-group col-md-6">
-      <label for="address">Address</label>
+      <label for="address"><b>Address</b></label>
       <input type="text" class="form-control" value="<?php echo $row["address"];?>" readonly>
     </div>
 
     <div class="form-group col-md-3">
-      <label for="city">City</label>
+      <label for="city"><b>City</b></label>
       <input type="text" class="form-control" value="<?php echo $row["city"];?>" readonly>
     </div>
 
     <div class="form-group col-md-3">
-      <label for="zip">Zip</label>
+      <label for="zip"><b>Zip</b></label>
       <input type="text" class="form-control" value="<?php echo $row["zip"];?>" readonly>
     </div>
 
